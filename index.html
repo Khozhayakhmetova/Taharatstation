@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Taharat Station — Water Efficiency Retrofit</title>
+  <meta name="description" content="Taharat Station is a demand-side WaterTech retrofit that replaces running taps with controlled micro-spray to reduce water waste in public facilities." />
+  <meta property="og:title" content="Taharat Station" />
+  <meta property="og:description" content="Water Resource Management via micro-spray retrofit." />
+  <meta property="og:type" content="website" />
+  <style>
+    :root{
+      --bg:#0b1220; --panel: rgba(255,255,255,.06);
+      --text:#e5e7eb; --muted:#94a3b8; --line:rgba(255,255,255,.10);
+      --cyan:#22d3ee; --cyan2:#06b6d4; --ok:#34d399;
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Helvetica Neue", Helvetica;
+      color:var(--text);
+      background:
+        radial-gradient(800px 500px at 70% 10%, rgba(34,211,238,.18), transparent 60%),
+        radial-gradient(700px 500px at 10% 70%, rgba(6,182,212,.14), transparent 60%),
+        linear-gradient(180deg, #0b1220 0%, #0a1426 55%, #08101f 100%);
+      overflow-x:hidden;
+    }
+    a{color:inherit}
+    .container{max-width:1100px; margin:0 auto; padding: 22px 18px 80px;}
+    .nav{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:10px 0;}
+    .brand{display:flex; align-items:center; gap:10px; text-decoration:none;}
+    .logo{width:40px;height:40px;border-radius:12px; background:linear-gradient(135deg,var(--cyan2),var(--cyan)); box-shadow:0 12px 30px rgba(34,211,238,.18)}
+    .brand span{font-weight:700; letter-spacing:.2px}
+    .nav-links{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-end}
+    .nav-links a{color:var(--muted); text-decoration:none; font-size:14px}
+    .nav-links a:hover{color:var(--text)}
+
+    .hero{padding:42px 0 26px; display:grid; grid-template-columns: 1.15fr .85fr; gap:22px; align-items:start;}
+    @media (max-width: 900px){.hero{grid-template-columns:1fr;}}
+
+    .h1{font-size:44px; line-height:1.05; margin:0 0 12px; letter-spacing:-.6px;}
+    .h1 .cyan{color:var(--cyan)}
+    .sub{color:var(--muted); font-size:16px; line-height:1.55; margin:0 0 18px; max-width:58ch}
+    .cta-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:10px}
+    .btn{border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); color:var(--text); padding:11px 14px; border-radius:12px; text-decoration:none; font-weight:650; font-size:14px; display:inline-flex; gap:10px; align-items:center}
+    .btn.primary{background:linear-gradient(135deg,var(--cyan2),var(--cyan)); border-color:transparent; color:#041018}
+    .btn:hover{transform: translateY(-1px); transition:transform .12s ease}
+
+    .panel{background:var(--panel); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow);}
+    .kpis{padding:18px; display:grid; grid-template-columns: repeat(3,1fr); gap:12px;}
+    @media (max-width: 900px){.kpis{grid-template-columns:1fr;}}
+    .kpi{padding:14px; border-radius:16px; border:1px solid rgba(34,211,238,.20); background:rgba(34,211,238,.05)}
+    .kpi .num{font-size:26px; font-weight:800; color:var(--cyan); letter-spacing:-.2px}
+    .kpi .lbl{color:var(--muted); font-size:13px; margin-top:4px; line-height:1.35}
+
+    .section{margin-top:26px;}
+    .section h2{margin:0 0 10px; font-size:22px; letter-spacing:-.2px}
+    .section p{margin:0; color:var(--muted); line-height:1.6}
+
+    .grid{margin-top:12px; display:grid; grid-template-columns: repeat(3,1fr); gap:12px}
+    @media (max-width: 900px){.grid{grid-template-columns:1fr;}}
+    .card{padding:16px; border-radius:16px; border:1px solid var(--line); background:rgba(255,255,255,.04)}
+    .card h3{margin:0 0 8px; font-size:15px}
+    .card p{margin:0; font-size:14px; color:var(--muted)}
+
+    .tag{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:rgba(34,211,238,.10); border:1px solid rgba(34,211,238,.24); color:var(--cyan); font-size:12px; font-weight:700; letter-spacing:.2px}
+
+    .footer{margin-top:40px; padding-top:18px; border-top:1px solid rgba(255,255,255,.10); color:var(--muted); font-size:13px; display:flex; flex-wrap:wrap; gap:10px; justify-content:space-between}
+    .note{font-size:12px; color:rgba(148,163,184,.85); line-height:1.45}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="#top" aria-label="Taharat Station">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Taharat Station</span>
+      </a>
+      <div class="nav-links">
+        <a href="#problem">Problem</a>
+        <a href="#solution">Solution</a>
+        <a href="#impact">Impact</a>
+        <a href="#traction">Traction</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <main id="top" class="hero">
+      <div>
+        <div class="tag">Water Resource Management • Demand-side efficiency</div>
+        <h1 class="h1">Reduce public facility water waste with <span class="cyan">controlled micro-spray</span>.</h1>
+        <p class="sub">Taharat Station is a retrofit that replaces running taps with dosed micro-spray. It targets ultra-low water per wash cycle and makes savings auditable through liters-per-cycle measurement.</p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="https://instagram.com/togzhansayss" target="_blank" rel="noopener">Request a pilot</a>
+          <a class="btn" href="#impact">See impact metrics</a>
+        </div>
+        <p class="note" style="margin-top:12px;">First application: wudu-friendly facilities (foot washing). Core identity: WaterTech for public infrastructure.</p>
+      </div>
+
+      <div class="panel">
+        <div class="kpis">
+          <div class="kpi">
+            <div class="num">1L / 50</div>
+            <div class="lbl">Target water use (wash cycles)</div>
+          </div>
+          <div class="kpi">
+            <div class="num">~98%</div>
+            <div class="lbl">Potential reduction vs 1L baseline (target-based)</div>
+          </div>
+          <div class="kpi">
+            <div class="num">53</div>
+            <div class="lbl">Paid locations committed (Astana)</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section id="problem" class="section">
+      <h2>Problem</h2>
+      <p>Public facilities often rely on running taps for washing. Continuous flow is hard to control, leads to unnecessary water waste, and creates hygiene and maintenance issues.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Uncontrolled flow</h3>
+          <p>Water runs continuously even when not needed, especially in high-traffic wash zones.</p>
+        </div>
+        <div class="card">
+          <h3>No measurement</h3>
+          <p>Facilities rarely track water used per wash cycle, making savings hard to prove.</p>
+        </div>
+        <div class="card">
+          <h3>Operational burden</h3>
+          <p>More water use can mean more cleaning, more slip risk, and higher utility costs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="section">
+      <h2>Solution</h2>
+      <p>A retrofit that delivers water as a controlled micro-spray instead of continuous flow. Designed for fast installation and ongoing maintenance through a hardware + service model.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Retrofit-friendly</h3>
+          <p>Installs next to existing sinks using standard plumbing connections, minimizing downtime.</p>
+        </div>
+        <div class="card">
+          <h3>Controlled delivery</h3>
+          <p>Dosed micro-spray targets ultra-low liters per wash cycle while maintaining usability.</p>
+        </div>
+        <div class="card">
+          <h3>Auditable KPI</h3>
+          <p>Liters saved per cycle → converts into m³ saved per site/year for WRM reporting.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" class="section">
+      <h2>Impact</h2>
+      <p>We report savings through a simple, auditable metric: <strong>liters saved per wash cycle</strong>, then translate to <strong>m³ saved per site per year</strong> based on measured usage.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Core KPI</h3>
+          <p><strong>~0.98 L saved per cycle</strong> (baseline 1.0 L/cycle vs target 0.02 L/cycle; pilot-validated target).</p>
+        </div>
+        <div class="card">
+          <h3>Scenario reporting</h3>
+          <p>m³/year per site calculated for 50 / 200 / 500 cycles per day (transparent assumptions).</p>
+        </div>
+        <div class="card">
+          <h3>SDG alignment</h3>
+          <p>Supports SDG 6 by improving water-use efficiency in public infrastructure (demand-side).</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="traction" class="section">
+      <h2>Traction & rollout</h2>
+      <p>Initial deployment focus is Astana, with expansion to water-stressed regions where public facilities have high daily washing demand.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Commitments</h3>
+          <p><strong>53 paid locations committed</strong> in Astana (early rollout pipeline).</p>
+        </div>
+        <div class="card">
+          <h3>Pipeline</h3>
+          <p><strong>1,800+</strong> early-user pipeline (demand signal via partner venues).</p>
+        </div>
+        <div class="card">
+          <h3>Business model</h3>
+          <p>Device + service: <strong>$1,500</strong> hardware (target) + <strong>$100/month</strong> maintenance (target).</p>
+        </div>
+      </div>
+      <p class="note" style="margin-top:10px;">Note: savings % and per-cycle targets are framed as targets and validated through pilots to avoid overclaim.</p>
+    </section>
+
+    <section id="contact" class="section panel" style="padding:18px;">
+      <h2 style="margin-top:0;">Contact</h2>
+      <p style="margin-bottom:12px;">To request a pilot or partnership, message:</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://instagram.com/togzhansayss" target="_blank" rel="noopener">Instagram @togzhansayss</a>
+        <a class="btn" href="mailto:hello@taharatstation.com">Email (replace)</a>
+      </div>
+      <p class="note" style="margin-top:10px;">Replace the email above with your real email. Domain is optional; GitHub Pages works for free.</p>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Taharat Station</div>
+      <div>Astana, Kazakhstan</div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
